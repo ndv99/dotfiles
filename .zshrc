@@ -133,3 +133,10 @@ unset ZSH_AUTOSUGGEST_USE_ASYNC
 
 # Created by `pipx` on 2024-10-11 10:16:23
 export PATH="$PATH:/home/noodl/.local/bin"
+
+# bun completions
+[ -s "/home/noodl/.bun/_bun" ] && source "/home/noodl/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
