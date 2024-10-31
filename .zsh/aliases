@@ -1,0 +1,22 @@
+# dotfile management
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias dfl='dotfiles'
+
+# "yarn" commands
+alias yc="yarn clean"
+alias ys="yarn start"
+alias yys="yarn && ys"
+alias ycs="yc && yys"
+alias yd="yarn dev"
+alias yyd="yarn && yd"
+alias yt="yarn test"
+
+# docker
+alias dcu="docker compose up"
+alias dcd="docker compose down"
+
+# "lxc" commands
+alias lxcl="watch lxc list --all-projects"
+
+# misc
+alias ns="notify-send"
