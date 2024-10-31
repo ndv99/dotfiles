@@ -1,0 +1,32 @@
+#cloud-config
+package_update: true
+package_upgrade: true
+packages:
+  - vim
+  - zsh
+  - bat
+  - stow
+users:
+  - name: noodl
+    gecos: Nick De Villiers
+    ssh_import_id:
+      - gh:ndv99
+    sudo: ["ALL=(ALL) NOPASSWD:ALL"]
+write_files:
+  - content: |
+      #!/bin/bash
+      chsh noodl -s /bin/zsh
+      git clone https://github.com/ndv99/dotfiles /home/noodl/.dotfiles
+      stow -d /home/noodl/.dotfiles .
+      wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -P /home/noodl
+      su - noodl -c 'sh /home/noodl/install.sh --unattended --keep-zshrc' 
+      git clone --depth 1 https://github.com/romkatv/powerlevel10k.git /home/noodl/.oh-my-zsh/custom/themes/powerlevel10k
+      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /home/noodl/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+      git clone https://github.com/zsh-users/zsh-autosuggestions /home/noodl/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+      git clone https://github.com/MichaelAquilina/zsh-you-should-use.git /home/noodl/.oh-my-zsh/custom/plugins/zsh-you-should-use
+      git clone https://github.com/fdellwing/zsh-bat.git /home/noodl/.oh-my-zsh/custom/plugins/zsh-bat
+      git clone https://github.com/endaaman/lxd-completion-zsh /home/noodl/.oh-my-zsh/custom/plugins/lxd-completion-zsh
+    path: /usr/local/bin/install-custom-shit
+    permissions: '0755'
+runcmd:
+  - sh /usr/local/bin/install-custom-shit
