@@ -27,3 +27,5 @@ alias lxcl="watch lxc list --all-projects"
 
 # misc
 alias ns="notify-send"
+alias nwd="notify-when-done"
+

@@ -2,3 +2,43 @@ mkcd () {
 	mkdir -p -- "$1" &&
 	cd -P -- "$1"
 }
+
+notify-when-done () {
+  # Check if "notify-send" is installed
+  if ! command -v notify-send &> /dev/null; then
+      echo "Error: notify-send is not installed. Please install it and try again."
+      exit 1
+  fi
+  
+  # Check if the "--" argument is present
+  if [[ $1 != "--" ]]; then
+      echo "Usage: $0 -- <command to be run>"
+      exit 1
+  fi
+  
+  # Shift past the "--"
+  shift
+  
+  # Check if a command was provided
+  if [[ $# -eq 0 ]]; then
+      echo "Error: No command provided to run."
+      echo "Usage: $0 -- <command to be run>"
+      exit 1
+  fi
+  
+  # Capture the command to be run
+  command_to_run="$@"
+  
+  # Run the command and capture the exit status
+  eval "$command_to_run"
+  exit_status=$?
+  
+  # Determine the notification message based on the exit status
+  if [[ $exit_status -eq 0 ]]; then
+      notify-send "Command Finished" "✅ Command '$command_to_run' completed successfully."
+  else
+      notify-send "Command Finished" "❌ Command '$command_to_run' failed with exit status $exit_status."
+  fi
+  
+}
+
