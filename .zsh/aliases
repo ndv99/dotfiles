@@ -3,13 +3,17 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias dfl='dotfiles'
 
 # "yarn" commands
+alias y="yarn"
 alias yc="yarn clean"
 alias ys="yarn start"
-alias yys="yarn && ys"
-alias ycs="yc && yys"
+alias yys="yarn && yarn start"
+alias ycs="yarn clean && yys"
 alias yd="yarn dev"
 alias yyd="yarn && yd"
 alias yt="yarn test"
+alias yl="yarn lint"
+alias ylt="yarn lint && yarn test"
+alias yylt = "yarn && ylt"
 
 # docker
 alias dcu="docker compose up"
