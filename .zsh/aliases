@@ -13,7 +13,7 @@ alias yyd="yarn && yd"
 alias yt="yarn test"
 alias yl="yarn lint"
 alias ylt="yarn lint && yarn test"
-alias yylt = "yarn && ylt"
+alias yylt="yarn && yarn lint && yarn test"
 
 # docker
 alias dcu="docker compose up"
