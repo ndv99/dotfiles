@@ -4,6 +4,9 @@ alias dfl='dotfiles'
 
 # "yarn" commands
 alias y="yarn"
+alias ya="yarn add"
+alias yad="yarn add -D"
+alias yr="yarn remove"
 alias yc="yarn clean"
 alias ys="yarn start"
 alias yys="yarn && yarn start"
