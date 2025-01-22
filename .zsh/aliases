@@ -21,6 +21,7 @@ alias yylt="yarn && yarn lint && yarn test"
 # docker
 alias dcu="docker compose up"
 alias dcd="docker compose down"
+alias dce="docker compose exec"
 
 # "lxc" commands
 alias lxcl="watch lxc list --all-projects"
