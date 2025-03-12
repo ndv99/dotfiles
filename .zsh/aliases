@@ -18,6 +18,8 @@ alias yt="yarn test"
 alias yl="yarn lint"
 alias ylt="yarn lint && yarn test"
 alias yylt="yarn && yarn lint && yarn test"
+alias yb="yarn build"
+alias ycb="yarn clean && yarn && yarn build"
 
 # docker
 alias dcu="docker compose up"
