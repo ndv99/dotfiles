@@ -34,5 +34,5 @@ alias ns="notify-send"
 alias nwd="notify-when-done"
 
 # backup to NAS
-rsync -av -e ssh /home/noodl ndv99@192.168.0.3::NetBackup/NICKDV-DESKTOP/home/ --exclude '.cache' --exclude 'SteamLibrary'
+alias backup="rsync -av -e ssh /home/noodl ndv99@192.168.0.3::NetBackup/NICKDV-DESKTOP/home/ --exclude '.cache' --exclude 'SteamLibrary'"
 
