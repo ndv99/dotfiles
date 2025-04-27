@@ -9,7 +9,7 @@ These are my dotfiles. Currently this includes:
     - [syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
     - [you-should-use](https://github.com/MichaelAquilina/zsh-you-should-use)
     - [lxd-completion](https://github.com/endaaman/lxd-completion-zsh)
-    - [auto-suggestinons](git clone https://github.com/zsh-users/zsh-autosuggestions)
+    - [auto-suggestinons](https://github.com/zsh-users/zsh-autosuggestions)
   - custom aliases and functions
 - tmux config (literally just has the colour fix but heyo whatever)
 
