@@ -6,7 +6,7 @@ These are my dotfiles. Currently this includes:
   - theme (and config): [powerlevel10k](https://github.com/romkatv/powerlevel10k.git)
   - plugins:
     - [bat](https://github.com.fdellwing/zsh-bat) (better cat)
-    - [syntax-highlighting](ttps://github.com/zsh-users/zsh-syntax-highlighting)
+    - [syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
     - [you-should-use](https://github.com/MichaelAquilina/zsh-you-should-use)
     - [lxd-completion](https://github.com/endaaman/lxd-completion-zsh)
     - [auto-suggestinons](git clone https://github.com/zsh-users/zsh-autosuggestions)
